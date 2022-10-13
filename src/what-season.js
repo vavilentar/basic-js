@@ -20,6 +20,12 @@ function getSeason(seasonDate = 'empty') {
     return 'Unable to determine the time of year!'
   }
   if (seasonDate instanceof Date) {
+    if (Object.prototype.toString.call(seasonDate) !== '[object Date]') {
+      throw new Error('Invalid date!');
+    }
+
+    let month = seasonDate.getMonth();
+
     switch (month) {
       case 0:
       case 1:
