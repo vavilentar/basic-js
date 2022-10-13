@@ -18,10 +18,6 @@ const {
 function createDreamTeam(array) {
 	// throw new NotImplementedError('Not implemented');
 	// remove line with error and write your code here
-
-	if (Object.prototype.toString.call(array) !== 'string') {
-		return false
-	} else {
 		let dt = [];
 		for (let i = 0; i < array.length; i++) {
 			if (typeof array[i] == 'string') {
@@ -36,7 +32,7 @@ function createDreamTeam(array) {
 			}
 		}
 		return dt.sort().join('').toUpperCase();
-	}
+	
 }
 
 module.exports = {
